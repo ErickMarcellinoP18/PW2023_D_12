@@ -8,55 +8,70 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <style>
-        /* Navbar Style */
-        @font-face {
-            font-family: montserrat;
-            src: url('fonts/Montserrat-VariableFont_wght.ttf');
-        }
-        * {
-            font-family: montserrat;
-        }
-        .navbar {
-            background-color: transparent;
-        }
-        
+    /* Navbar Style */
+    @font-face {
+        font-family: montserrat;
+        src: url('fonts/Montserrat-VariableFont_wght.ttf');
+    }
+    * {
+        font-family: montserrat;
+    }
+    .navbar {
+        background-color: transparent;
+    }
+    
+    .carousel-caption {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.3rem; /* Adjust the font size as needed */
+        text-shadow: -2px -2px white;
+        font-weight: bold;
+        color: black; /* Set the text color to black */
+        padding-top: 25px;
+    }
 
-        .carousel-caption {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.7); /* Latar belakang semi-transparan */
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .navbar-nav .nav-link {
-            font-size: 1.5rem; /* Adjust the font size as needed */
-            text-shadow: 2px 2px black;
-            font-weight: bold;
-            color: #ffffff; /* Set the text color to white */
-            
-        }
+    .navbar-nav .nav-link:hover {
+        font-size: 1.4rem;
+    }
+    
+    /* Customize the font size for "Say Yes" and "Unforgettable Weddings, Designed with Love" */
+    .carousel-caption h1 {
+        font-size: 4rem; /* Adjust the font size as needed */
+    }
 
-        /* Customize the font size for "Say Yes" and "Unforgettable Weddings, Designed with Love" */
-        .carousel-caption h1 {
-            font-size: 4rem; /* Sesuaikan ukuran sesuai kebutuhan */
-        }
+    .carousel-caption p {
+        font-size: 2rem; /* Adjust the font size as needed */
+    }
+    
+    .navbar-brand img {
+        max-height: 80px; /* Adjust the maximum height for your logo */
+    }
 
-        .carousel-caption p {
-            font-size: 2rem; /* Sesuaikan ukuran sesuai kebutuhan */
-        }
-        
-        .banner-image {
-            background-image: url('images/lampu.jpeg');
-            background-size: cover;
-            filter:blur(3px)
-        }
-    </style>
-    </styl>
+    .banner-image {
+        background-image: url('images/home1.png');
+        background-size: cover;
+        filter: blur(3px);
+    }
+    .navbar-brand img {
+        max-height: 120px; /* Adjust the maximum height for your logo */
+        position: absolute;
+        size: 50px;
+    }
+</style>
+
+
 </head>
 <body>
             <!-- Navbar  -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#home">
+            <img src="{{asset('images\logoWhite.png')}}" alt="logo">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
