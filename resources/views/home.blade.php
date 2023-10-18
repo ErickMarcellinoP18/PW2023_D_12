@@ -19,48 +19,69 @@
     .navbar {
         background-color: transparent;
     }
-    
-    .carousel-caption {
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 10px;
-        padding: 20px;
+
+    h2{
+        color: white;
     }
-    .navbar-nav .nav-link {
-        font-size: 1.3rem; /* Adjust the font size as needed */
-        text-shadow: -2px -2px white;
+
+   
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem; /* Adjust the font size as needed */
+        text-shadow: 2px 2px black; /* Adjust the shadow as needed */
         font-weight: bold;
-        color: black; /* Set the text color to black */
-        padding-top: 25px;
+        color: white !important; /* Set the text color to black with !important */
     }
+
 
     .navbar-nav .nav-link:hover {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     
-    /* Customize the font size for "Say Yes" and "Unforgettable Weddings, Designed with Love" */
-    .carousel-caption h1 {
-        font-size: 4rem; /* Adjust the font size as needed */
-    }
-
-    .carousel-caption p {
-        font-size: 2rem; /* Adjust the font size as needed */
-    }
-    
-    .navbar-brand img {
-        max-height: 80px; /* Adjust the maximum height for your logo */
-    }
 
     .banner-image {
         background-image: url('images/home1.png');
         background-size: cover;
-        filter: blur(3px);
     }
+    
+
     .navbar-brand img {
-        max-height: 120px; /* Adjust the maximum height for your logo */
-        position: absolute;
-        size: 50px;
+        max-width: 100px;
     }
+    
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi kontainer menjadi dua kolom dengan lebar yang sama */
+    gap: 20px; /* Jarak antara kotak kiri dan kanan */
+    margin: 20px; /* Margin umum di sekitar kontainer */
+}
+
+.grid-child {
+    padding: 20px; /* Isi di dalam setiap kotak */
+    background-color: #f0f0f0; /* Warna latar belakang untuk kotak-kotak */
+    border: 1px solid #ddd; /* Garis pembatas di sekitar kotak-kotak */
+}
+
+.image {
+    /* Kontainer gambar */
+    text-align: center; /* Untuk mengatur gambar ke tengah */
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Untuk tampilan seluler, hanya satu kolom */
+    }
+}
+
+.card{
+    margin: 50px;
+    display: flex;
+}
+
+.card-text-big{
+    font-size: 20px;
+}
+
+    
 </style>
 
 
@@ -88,9 +109,6 @@
           <div class="mx-auto"></div>
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
@@ -115,14 +133,30 @@
 
     <!-- Banner Image  -->
     <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-      <div class="content text-center">
-        <h1 class="text-white">Say Yes!</h1>
-      </div>
-    </div>
+        <div class="content text-center">
+            <img src="{{asset('images\logoTextOnly.png')}}" alt="" class="logo-image">
+            <h2>Unforgettable Weddings,</h2>
+            <h2>Designed With Love.</h2>
         </div>
     </div>
-</nav>
-
+    <div class="row">
+        <div class="col-sm-6">
+                <div class="card" style="width: 40rem;">
+                    <img class="card-img-top" src="{{ asset('images/lampu.jpeg') }}" alt="Card image cap">
+                </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" style="width: 40rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to Say Yes</h5>
+                    <p class="card-text-big">The perfect solution for your wedding needs! We are professional wedding event organizer, 
+                        ready to provide an exceptional experience in planning and executing various types of wedding dreams.With our 
+                        experienced team, trusted vendor network, and our commitment to client satisfaction, we have built a reputation 
+                        as the top choice in the industry. Trust us to turn your wedding vision into an unforgettable reality.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
 <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
