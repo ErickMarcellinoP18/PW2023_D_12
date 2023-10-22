@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="home.css" />
-    <!-- Custom CSS -->
+
     <style>
-        /* Navbar Style */
+        /* Font Style */
         @font-face {
             font-family: montserrat;
             src: url('fonts/Montserrat-VariableFont_wght.ttf');
@@ -18,14 +17,15 @@
 
         * {
             font-family: montserrat;
+            color: white;
         }
 
+        /* Navbar Style*/
         .navbar {
+            padding: 35px;
             background-color: transparent;
             transition: background-color 0.5s, border-bottom 0.10s;
             /* Add smooth transition effect */
-            padding: 35px;
-            /* Adjust top and bottom padding */
         }
 
         .navbar-small {
@@ -33,53 +33,33 @@
             /* Reduce the height of the navbar */
         }
 
-        .navbar-blue {
+        .navbar-transition {
             background-color: #74583E;
             border-bottom: 2px solid white;
-            /* Set the background color to blue when scrolled */
-        }
-
-        h2 {
-            color: white;
+            /* Set background color and border when scrolled */
         }
 
         .navbar-nav .nav-item .nav-link {
             font-size: 1.2rem;
-            text-shadow: 2px 2px black;
             font-weight: bold;
             color: white !important;
+            text-shadow: 2px 2px black;
         }
 
         .navbar-nav .nav-link:hover {
             font-size: 1.3rem;
         }
 
-        .banner-image {
-            background-image: url('images/home1.png');
-            background-size: cover;
-            margin-bottom: 10px;
-            height: 100vh;
-        }
-
         .navbar-brand img {
             max-width: 100px;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px;
-        }
-
-        .grid-child {
-            padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-        }
-
-        .image {
-            text-align: center;
+        /* banner */
+        .banner-image {
+            margin-bottom: 10px;
+            height: 100vh;
+            background-image: url('images/home1.png');
+            background-size: cover;
         }
 
         @media (max-width: 768px) {
@@ -88,6 +68,7 @@
             }
         }
 
+        /* About Us */
         .card {
             margin: 15px;
             display: flex;
@@ -96,15 +77,15 @@
         }
 
         .card-body {
-            background-color: #74583E;
-            color: white;
             padding-left: 40px;
             padding-right: 40px;
             padding-top: 15px;
             padding-bottom: 15px;
+            color: white;
+            background-color: #74583E;
         }
 
-        .card-text-big {
+        .card-text-isi {
             font-size: 14px;
             font-weight: 250;
         }
@@ -115,6 +96,7 @@
             justify-content: center;
         }
 
+        /* Venue */
         .venue-card-all {
             margin-top: 50px;
             background-color: #74583E;
@@ -145,39 +127,33 @@
         }
 
         .venue-card img {
-            max-width: 180px;
-            height: 180px;
-            display: inline-block;
-            cursor: pointer;
-            border: 4px solid white;
-            border-radius: 50%;
             margin-left: 32px;
             margin-right: 32px;
             margin-bottom: 25px;
+            width: 180px;
+            height: 180px;
+            border: 4px solid white;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
         }
 
-        /* Section 1: About Us */
+        /* Padding */
+
         #about-us {
             padding-top: 70px;
-            /* Add some padding to create space for the navbar */
         }
 
-        /* Section 2: Venue */
         #venue {
             padding-top: 70px;
-            /* Add some padding to create space for the navbar */
         }
 
-        /* Section 3: Contact */
         #package {
             padding-top: 70px;
-            /* Add some padding to create space for the navbar */
         }
 
-        /* Section 3: Contact */
         #testimony {
             padding-top: 70px;
-            /* Add some padding to create space for the navbar */
         }
     </style>
 </head>
@@ -246,9 +222,9 @@
                                 <img src="{{ asset('images/logoWhite.png') }}" alt="" style="width: 7rem;">
                             </h5>
                         </div>
-                        <p class="card-text-big">"The perfect solution for your wedding needs! We are professional wedding event organizer,
+                        <p class="card-text-isi">"The perfect solution for your wedding needs! We are professional wedding event organizer,
                             ready to provide an exceptional experience in planning and executing various types of wedding dreams.</p>
-                        <p class="card-text-big">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
+                        <p class="card-text-isi">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
                             we have built a reputation as the top choice in the industry. Trust us to turn your wedding vision into an
                             unforgettable reality." </p>
                     </div>
@@ -334,9 +310,9 @@
             const navbar = document.querySelector('.navbar');
 
             if (window.scrollY > bannerImage.clientHeight) {
-                navbar.classList.add('navbar-blue');
+                navbar.classList.add('navbar-transition');
             } else {
-                navbar.classList.remove('navbar-blue');
+                navbar.classList.remove('navbar-transition');
             }
         });
     </script>
