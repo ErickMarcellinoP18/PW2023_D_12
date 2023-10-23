@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css" />
+
     <style>
         /* Navbar Style */
         @font-face {
@@ -129,7 +129,7 @@
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Sign In</a>
+                        <a class="nav-link" href="#signin">Sign In</a>
                     </li>
                 </ul>
             </div>
