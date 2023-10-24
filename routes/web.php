@@ -60,8 +60,12 @@ Route::get('/karyawan', function () {
             'email'=> 'Silverq@gmail.com',
             'telp'=> '083116441996'
         ]
-        ],
+        ]
+    ]);
+});
 
+Route::get('/admin', function () {
+    return view('admin',[
         'dude' => [
             'gambar' => "https://www.fitnessfirst.co.id/id/-/media/project/evolution-wellness/fitness-first/south-east-asia/indonesia/classes/bodycombat/bodycombat_fb-sharing.png",
             'nama' => "Bapak Admin",
@@ -78,4 +82,8 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::get('/editAdmin', function () {
+    return view('editAdmin');
 });
