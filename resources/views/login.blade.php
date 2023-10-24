@@ -124,7 +124,7 @@
 
                         <!-- Submit button -->
                         <button type="submit" style="width: auto; border-radius: 15px;" class="btn btn-primary btn-block mb-2 mt-3 ">
-                            <a class="nav-link" href="{{ url('/register')}}">LOGIN</a>
+                            <a class="nav-link" href="{{ url('/home')}}">LOGIN</a>
                         </button>
                     </form>
                 </div>

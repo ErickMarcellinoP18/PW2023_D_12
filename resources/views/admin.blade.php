@@ -89,7 +89,7 @@
                             <a class="nav-link" href="{{('karyawan')}}">Daftar Karyawan</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ url('/')}}">Sign Out</a>
+                            <a class="nav-link" href="{{ url('/home')}}">Sign Out</a>
                         </li>
                     </ul>
                 </div>
