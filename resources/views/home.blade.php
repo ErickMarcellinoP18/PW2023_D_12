@@ -327,7 +327,11 @@
             // In this example, we simply reload the page without making a request
 
             // Clear the user_logged_in session variable
-
+            @if(session('user_logged_in'));
+            @php
+            @session(['user_logged_in' => false]);
+            @endphp
+            @endif
 
             location.reload();
         }
