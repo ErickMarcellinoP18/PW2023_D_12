@@ -93,11 +93,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="addressInput" class="form-label">Alamat</label>
-                                <input type="text" name="address" class="form-control" id="addressInput" required />
+                                <input type="text" name="address" class="form-control" id="addressInput"/>
                             </div>
                             <div class="mb-3">
                                 <label for="positionInput" class="form-label">Jabatan</label>
-                                <input type="text" name="position" class="form-control" id="positionInput" required />
+                                <input type="text" name="position" class="form-control" id="positionInput"/>
                             </div>
                             
                             <button type="submit" style="width: auto; border-radius: 15px; background-color:green;" class="btn btn-primary btn-block mb-2 mt-3">
