@@ -133,7 +133,7 @@
             <div class="float-right col-3" style="margin-left:auto; text-align:right";>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <button type="submit" style="width: auto; color:white; border-radius: 15px;" class="btn formed btn-block mb-2 mt-3">                
-                    <a style="font-size:15px;" class="nav-link" href="{{('editAdmin')}}"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" fill="#2F88FF" stroke="#000" rx="3"/><path stroke="#fff" stroke-linecap="round" d="M24 16V32"/><path stroke="#fff" stroke-linecap="round" d="M16 24L32 24"/></g></svg><strong>Tambah Karyawan</strong></a>
+                    <a style="font-size:15px;" class="nav-link" href="{{('tambahPegawai')}}"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" fill="#2F88FF" stroke="#000" rx="3"/><path stroke="#fff" stroke-linecap="round" d="M24 16V32"/><path stroke="#fff" stroke-linecap="round" d="M16 24L32 24"/></g></svg><strong>Tambah Karyawan</strong></a>
                 </button>
             </div>
         </div>

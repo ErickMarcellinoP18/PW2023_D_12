@@ -167,6 +167,9 @@ Route::get('/admin', function () {
     ]);
 });
 
+Route::get('/tambahPegawai', function () {
+    return view('tambahPegawai');
+});
 
 Route::post('/login', [LoginController::class, 'login'])->name('login'); // Use LoginController
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
