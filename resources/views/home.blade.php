@@ -287,7 +287,8 @@
                         </div>
                         <p class="card-text-isi">"The perfect solution for your wedding needs! We are professional wedding event organizer,
                             ready to provide an exceptional experience in planning and executing various types of wedding dreams.</p>
-                        <p class="card-text-isi">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
+                        <p> &nbsp</p>
+                        <p <p class="card-text-isi">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
                             we have built a reputation as the top choice in the industry. Trust us to turn your wedding vision into an
                             unforgettable reality." </p>
                     </div>
@@ -304,11 +305,11 @@
                     &nbsp;&nbsp;Venue Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1" data-href="venue1.html">
-                    <img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2" data-href="venue2.html">
-                    <img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 3" data-href="venue3.html">
-                    <img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 4" data-href="venue4.html">
-                    <img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5" data-href="venue5.html">
+                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1"></a>
+                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2"></a>
+                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 3"></a>
+                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 4"></a>
+                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5"></a>
                 </div>
             </div>
         </div>

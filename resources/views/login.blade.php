@@ -12,9 +12,16 @@
 
 <body class="antialiased">
     <style>
-        body {
-            font-family: Roboto, Helvetica, Arial, sans-serif;
+        @font-face {
+            font-family: montserrat;
+            src: url('fonts/Montserrat-VariableFont_wght.ttf');
         }
+
+        * {
+            font-family: montserrat;
+            color: white;
+        }
+
 
         section {
             width: 100%;
@@ -65,7 +72,6 @@
         }
 
         .form-label {
-            font-family: 'Jomolhari';
             font-size: 20px;
             color: white;
         }
@@ -97,7 +103,7 @@
                             </div>
 
                             <button type="button" class="btn btn-link"><a class="nav-link" href="{{ url('/')}}">Forgot Password?</a></button>
-                            <button type="button" class="btn btn-link" style="margin-left: 200px;"><a class="nav-link" href="{{ url('/register')}}">Register</a></button>
+                            <button type="button" class="btn btn-link" style="margin-left: 170px;"><a class="nav-link" href="{{ url('/register')}}">Register</a></button>
                             <button type="submit" style="width: auto; border-radius: 15px;" class="btn btn-primary btn-block mb-2 mt-3">Login
                             </button>
                         </form>

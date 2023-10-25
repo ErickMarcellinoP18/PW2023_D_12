@@ -19,6 +19,14 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/customer', function () {
+    return view('customer');
+});
+
 Route::get('/karyawan', function () {
     return view('karyawan',  [
         'anggota' => [
@@ -106,9 +114,6 @@ Route::get('/editAdmin', function () {
     ]);
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
 
 Route::get('/vendor', function () {
     return view('vendor',  [
