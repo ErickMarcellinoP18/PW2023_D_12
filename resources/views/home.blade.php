@@ -30,7 +30,6 @@
 
         .navbar-small {
             height: 60px;
-            /* Reduce the height of the navbar */
         }
 
         .navbar-transition {
@@ -214,7 +213,6 @@
 
         .custom-navbar {
             background-color: #74583E;
-            /* Change to your desired background color */
         }
     </style>
 </head>
@@ -259,6 +257,7 @@
             </div>
         </div>
     </nav>
+
     <!-- Banner Image  -->
     <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
         <div class="content text-center">
@@ -333,6 +332,7 @@
         </div>
     </section>
 
+    <!-- Section 3: Contact -->
     <section id="contact">
         <nav class="navbar navbar-dark custom-navbar">
             <div class="container-fluid" style="height: 70px;">
@@ -396,53 +396,50 @@
                 </div>
             </div>
         </nav>
-        <script>
-            // Add smooth scrolling behavior to your links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
+    </section>
+    <script>
+        // Add smooth scrolling behavior to links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-                    const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
-                    const targetSection = document.getElementById(targetId);
+                const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+                const targetSection = document.getElementById(targetId);
 
-                    if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Change navbar background color when scrolling
-            window.addEventListener('scroll', () => {
-                const bannerImage = document.querySelector('.banner-image');
-                const navbar = document.querySelector('.navbar');
-
-                if (window.scrollY > bannerImage.clientHeight) {
-                    navbar.classList.add('navbar-transition');
-                } else {
-                    navbar.classList.remove('navbar-transition');
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
             });
+        });
 
-            function logoutUser() {
-                // Send a request to log out the user (you can use an API endpoint or a server route)
-                // After successfully logging out, update the link text and href
-                // In this example, we simply reload the page without making a request
+        // Change navbar background color when scrolling
+        window.addEventListener('scroll', () => {
+            const bannerImage = document.querySelector('.banner-image');
+            const navbar = document.querySelector('.navbar');
 
-                // Clear the user_logged_in session variable
-                @if(session('user_logged_in'));
-                @php
-                @session(['user_logged_in' => false]);
-                @endphp
-                @endif
-
-                location.reload();
+            if (window.scrollY > bannerImage.clientHeight) {
+                navbar.classList.add('navbar-transition');
+            } else {
+                navbar.classList.remove('navbar-transition');
             }
-        </script>
+        });
 
-        <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
+        function logoutUser() {
+
+            // Clear the user_logged_in session variable
+            @if(session('user_logged_in'));
+            @php
+            @session(['user_logged_in' => false]);
+            @endphp
+            @endif
+
+            location.reload();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
