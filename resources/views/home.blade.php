@@ -152,8 +152,69 @@
             padding-top: 70px;
         }
 
-        #testimony {
+        #contact {
             padding-top: 70px;
+        }
+
+        /* footer */
+
+        h6 {
+            color: white;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        p {
+            color: white;
+            margin-bottom: 2px;
+        }
+
+        .navbar-brand-footer {
+            margin-left: 50px;
+            margin-right: -400px;
+        }
+
+        .navbar-brand-footer img {
+            margin-left: -30px;
+            margin-top: -10px;
+        }
+
+        .footer-1 {
+            text-align: left;
+            margin-left: 380px;
+            margin-top: -50px;
+        }
+
+        .footer-2 {
+            text-align: left;
+            margin-top: -55px;
+            margin-left: 5%;
+        }
+
+        .col {
+            color: red;
+            max-width: 600px;
+            margin-top: 15px;
+        }
+
+        .sosmed {
+            margin-left: -353px;
+            margin-top: 5px;
+        }
+
+        h3 {
+            color: white;
+            text-align: right;
+            margin-top: -75px;
+            margin-right: -40px;
+            font-family: 'Courier Prime';
+            word-spacing: 5px;
+            letter-spacing: 5px;
+        }
+
+        .custom-navbar {
+            background-color: #74583E;
+            /* Change to your desired background color */
         }
     </style>
 </head>
@@ -181,9 +242,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#package">Package</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimony">Testimony</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Us</a>
@@ -274,71 +332,116 @@
         </div>
     </section>
 
-    <!-- Section 4: Testimony -->
-    <section id="testimony">
-        <div class="container">
-            <div class="venue-card-all">
-                <h5 class="text-center mb-4"><img src="{{ asset('images/logoTextOnly.png') }}" alt="" style="width: 10rem;">
-                    &nbsp;&nbsp;Testimony
-                </h5>
-                <div class="venue-card mx-auto">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 1" data-href="venue1.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 2" data-href="venue2.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 3" data-href="venue3.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 4" data-href="venue4.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 5" data-href="venue5.html">
+    <section id="contact">
+        <nav class="navbar navbar-dark custom-navbar">
+            <div class="container-fluid" style="height: 70px;">
+                <a class="navbar-brand-footer">
+                    <img style="width: 150px" src=" {{asset('images\logoWhite.png')}}" alt="logo" />
+                </a>
+                <div class="container-fluid text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="footer-1">
+                                <h6>PT KERJA KERAS</h6>
+                                <p>St. Bonaventura</p>
+                                <p>Jl. Babarsari No.43</p>
+                                <p>Yogyakarta 55281</p>
+                            </div>
+                        </div>
+                        <div style="width: 100px; height: 0px; left: 530px; top: 25px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px white solid"></div>
+                        <div class="col">
+                            <div class="footer-2">
+                                <p>Email : kerjakeras@gmail.com</p>
+                                <p>Phone : 0274487711</p>
+                                <p>Mobile : 082321992030</p>
+                            </div>
+                            <div class="sosmed">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 448 512" style="margin-right: 20px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <style>
+                                        svg {
+                                            fill: #ffffff
+                                        }
+                                    </style>
+                                    <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 448 512" style="margin-right: 20px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <style>
+                                        svg {
+                                            fill: #ffffff
+                                        }
+                                    </style>
+                                    <path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="21px" viewBox="0 0 512 512" style="margin-right: 20px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <style>
+                                        svg {
+                                            fill: #ffffff
+                                        }
+                                    </style>
+                                    <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <style>
+                                        svg {
+                                            fill: #ffffff
+                                        }
+                                    </style>
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Dreams Come True</h3>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+        <script>
+            // Add smooth scrolling behavior to your links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
 
-    <script>
-        // Add smooth scrolling behavior to your links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+                    const targetSection = document.getElementById(targetId);
 
-                const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
-                const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
 
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            // Change navbar background color when scrolling
+            window.addEventListener('scroll', () => {
+                const bannerImage = document.querySelector('.banner-image');
+                const navbar = document.querySelector('.navbar');
+
+                if (window.scrollY > bannerImage.clientHeight) {
+                    navbar.classList.add('navbar-transition');
+                } else {
+                    navbar.classList.remove('navbar-transition');
                 }
             });
-        });
 
-        // Change navbar background color when scrolling
-        window.addEventListener('scroll', () => {
-            const bannerImage = document.querySelector('.banner-image');
-            const navbar = document.querySelector('.navbar');
+            function logoutUser() {
+                // Send a request to log out the user (you can use an API endpoint or a server route)
+                // After successfully logging out, update the link text and href
+                // In this example, we simply reload the page without making a request
 
-            if (window.scrollY > bannerImage.clientHeight) {
-                navbar.classList.add('navbar-transition');
-            } else {
-                navbar.classList.remove('navbar-transition');
+                // Clear the user_logged_in session variable
+                @if(session('user_logged_in'));
+                @php
+                @session(['user_logged_in' => false]);
+                @endphp
+                @endif
+
+                location.reload();
             }
-        });
+        </script>
 
-        function logoutUser() {
-            // Send a request to log out the user (you can use an API endpoint or a server route)
-            // After successfully logging out, update the link text and href
-            // In this example, we simply reload the page without making a request
-
-            // Clear the user_logged_in session variable
-            @if(session('user_logged_in'));
-            @php
-            @session(['user_logged_in' => false]);
-            @endphp
-            @endif
-
-            location.reload();
-        }
-    </script>
-
-    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

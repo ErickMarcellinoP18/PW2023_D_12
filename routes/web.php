@@ -153,9 +153,9 @@ Route::get('/admin', function () {
     return view('admin', [
         'dude' => [
             'gambar' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwODZ-msfh5mYs7LmWCY3tWtF8vmH-RMwSOC8KM_am2w&s.jpg",
-            'nLengkap' => 'Admin Ganteng Sejagat',
-            'nickname' => 'Bapak Admin',
-            'jabatan' => 'Manager',
+            'nLengkap' => 'John Everest',
+            'nickname' => 'John',
+            'jabatan' => 'Senior Manager',
             'ruang' => '3315'
         ]
     ]);
