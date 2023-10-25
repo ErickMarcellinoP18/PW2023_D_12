@@ -189,13 +189,18 @@
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
+                        @if(session('user_logged_in'))
+                        <!-- User is considered logged in, show the "Logout" link -->
+                        <a class="nav-link" href="javascript:void(0);" onclick="logoutUser();">Logout</a>
+                        @else
+                        <!-- User is not considered logged in, show the "Login" link -->
                         <a class="nav-link" href="{{ url('login')}}">Login</a>
+                        @endif
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Banner Image  -->
     <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
         <div class="content text-center">
@@ -241,11 +246,11 @@
                     &nbsp;&nbsp;Venue Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 1" data-href="venue1.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 2" data-href="venue2.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 3" data-href="venue3.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 4" data-href="venue4.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 5" data-href="venue5.html">
+                    <img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1" data-href="venue1.html">
+                    <img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2" data-href="venue2.html">
+                    <img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 3" data-href="venue3.html">
+                    <img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 4" data-href="venue4.html">
+                    <img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5" data-href="venue5.html">
                 </div>
             </div>
         </div>
@@ -256,14 +261,14 @@
         <div class="container">
             <div class="venue-card-all">
                 <h5 class="text-center mb-4"><img src="{{ asset('images/logoTextOnly.png') }}" alt="" style="width: 10rem;">
-                    &nbsp;&nbsp;Venue Choice
+                    &nbsp;&nbsp;Package Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 1" data-href="venue1.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 2" data-href="venue2.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 3" data-href="venue3.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 4" data-href="venue4.html">
-                    <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 5" data-href="venue5.html">
+                    <img src="{{ asset('images/Package.jpeg') }}" alt="Venue 1" data-href="venue1.html">
+                    <img src="{{ asset('images/Package2.jpeg') }}" alt="Venue 2" data-href="venue2.html">
+                    <img src="{{ asset('images/Package3.jpeg') }}" alt="Venue 3" data-href="venue3.html">
+                    <img src="{{ asset('images/Package4.jpeg') }}" alt="Venue 4" data-href="venue4.html">
+                    <img src="{{ asset('images/Package5.jpeg') }}" alt="Venue 5" data-href="venue5.html">
                 </div>
             </div>
         </div>
@@ -274,7 +279,7 @@
         <div class="container">
             <div class="venue-card-all">
                 <h5 class="text-center mb-4"><img src="{{ asset('images/logoTextOnly.png') }}" alt="" style="width: 10rem;">
-                    &nbsp;&nbsp;Venue Choice
+                    &nbsp;&nbsp;Testimony
                 </h5>
                 <div class="venue-card mx-auto">
                     <img src="{{ asset('images/lampu.jpeg') }}" alt="Venue 1" data-href="venue1.html">
@@ -315,6 +320,21 @@
                 navbar.classList.remove('navbar-transition');
             }
         });
+
+        function logoutUser() {
+            // Send a request to log out the user (you can use an API endpoint or a server route)
+            // After successfully logging out, update the link text and href
+            // In this example, we simply reload the page without making a request
+
+            // Clear the user_logged_in session variable
+            @if(session('user_logged_in'));
+            @php
+            @session(['user_logged_in' => false]);
+            @endphp
+            @endif
+
+            location.reload();
+        }
     </script>
 
     <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
