@@ -92,7 +92,7 @@
                                 <input type="text" name="phone" class="form-control" id="phoneInput" required />
                             </div>
                             <div class="mb-3">
-                                <label for "addressInput" class="form-label">Address</label>
+                                <label for="addressInput" class="form-label">Address</label>
                                 <input type="text" name="address" class="form-control" id="addressInput" required />
                             </div>
                             <div class="mb-3">

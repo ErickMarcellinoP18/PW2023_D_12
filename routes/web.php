@@ -15,9 +15,9 @@ use App\Http\Controllers\LoginController;
 */
 
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/home', function () {
     return view('home');
@@ -105,11 +105,12 @@ Route::get('/register', function () {
 Route::get('/editAdmin', function () {
     return view('editAdmin', [
         'dude' => [
-            'gambar' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwODZ-msfh5mYs7LmWCY3tWtF8vmH-RMwSOC8KM_am2w&s.jpg',
-            'namaLengkap' => 'Admin Ganteng Sejagat',
-            'nickname' => 'Bapak Admin',
-            'jabatan' => 'Manager',
-            'ruang' => '3315'
+            'gambar' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwODZ-msfh5mYs7LmWCY3tWtF8vmH-RMwSOC8KM_am2w&s.jpg",
+            'nLengkap' => 'John Everest',
+            'nickname' => 'John',
+            'jabatan' => 'Senior Manager',
+            'ruang' => '3315',
+            'password'=>'bekerjaYuk1!'
         ]
     ]);
 });
@@ -168,4 +169,4 @@ Route::get('/admin', function () {
 
 
 Route::post('/login', [LoginController::class, 'login'])->name('login'); // Use LoginController
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
