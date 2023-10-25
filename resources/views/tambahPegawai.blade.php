@@ -103,6 +103,9 @@
                             <button type="submit" style="width: auto; border-radius: 15px; background-color:green;" class="btn btn-primary btn-block mb-2 mt-3">
                 <a style="font-size:13px;" class="nav-link" href="{{('karyawan')}}"><strong>Done</strong></a>
             </button>
+            <button type="submit" style="width: auto; border-radius: 15px; background-color:red;" class="btn btn-primary btn-block mb-2 mt-3 btn-danger">
+                <a style="font-size:13px;" class="nav-link" href="{{('karyawan')}}"><strong>cancel</strong></a>
+            </button>
                         </form>
                     </div>
                 </div>
