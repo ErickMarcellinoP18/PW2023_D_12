@@ -305,11 +305,11 @@
                     &nbsp;&nbsp;Venue Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1"></a>
-                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2"></a>
-                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 3"></a>
-                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 4"></a>
-                    <a href="{{ url('customer') }}"><img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5"></a>
+                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1"></a>
+                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2"></a>
+                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 3"></a>
+                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 4"></a>
+                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5"></a>
                 </div>
             </div>
         </div>
@@ -323,11 +323,11 @@
                     &nbsp;&nbsp;Package Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <img src="{{ asset('images/Package.jpeg') }}" alt="Venue 1" data-href="venue1.html">
-                    <img src="{{ asset('images/Package2.jpeg') }}" alt="Venue 2" data-href="venue2.html">
-                    <img src="{{ asset('images/Package3.jpeg') }}" alt="Venue 3" data-href="venue3.html">
-                    <img src="{{ asset('images/Package4.jpeg') }}" alt="Venue 4" data-href="venue4.html">
-                    <img src="{{ asset('images/Package5.jpeg') }}" alt="Venue 5" data-href="venue5.html">
+                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package.jpeg') }}" alt="Package 1"></a>
+                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package2.jpeg') }}" alt="Package 2"></a>
+                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package3.jpeg') }}" alt="Package 3"></a>
+                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package4.jpeg') }}" alt="Package 4"></a>
+                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package5.jpeg') }}" alt="Package 5"></a>
                 </div>
             </div>
         </div>

@@ -23,8 +23,12 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/customer', function () {
-    return view('customer');
+Route::get('/customer1', function () {
+    return view('customer1');
+});
+
+Route::get('/customer2', function () {
+    return view('customer2');
 });
 
 Route::get('/karyawan', function () {
