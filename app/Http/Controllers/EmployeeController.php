@@ -57,11 +57,7 @@ class EmployeeController extends Controller
             'employee_salary' => $request->employee_salary,
         ]);
 
-        try {
-            return redirect()->route('employee.index');
-        } catch (Exception $e) {
-            return redirect()->route('employee.index');
-        }
+        return view('employee.index')->with(['success' => 'Data Berhasil Ditambahkan!']);
     }
 
     /**
