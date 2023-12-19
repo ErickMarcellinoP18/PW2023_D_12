@@ -152,6 +152,7 @@
                     <th>Actions</th>
                 </tr>
             </thead>
+
             <tbody>
                 @forelse ($anggota as $item)
                 <tr>
@@ -162,6 +163,9 @@
                         <div class="btn-container">
                             <button type="submit" class="btn btn-primary">
                                 <a class="nav-link" href="#">Call</a>
+                            </button>
+                            <button type="submit" class="btn btn-warning">
+                                <a class="nav-link" href="{{('editKaryawan')}}">Edit</a>
                             </button>
                             <button type="submit" class="btn btn-danger">
                                 <a class="nav-link" href="#">Fire</a>
@@ -177,6 +181,7 @@
                 </tr>
                 @endforelse
             </tbody>
+
         </table>
     </div>
 

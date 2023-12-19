@@ -253,6 +253,7 @@
                         <a class="nav-link" href="{{ url('login')}}">Login</a>
                         @endif
                     </li>
+
                 </ul>
             </div>
         </div>

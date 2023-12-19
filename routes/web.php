@@ -115,6 +115,9 @@ Route::get('/editAdmin', function () {
     ]);
 });
 
+Route::get('/editKaryawan', function () {
+    return view('editKaryawan');
+});
 
 Route::get('/vendor', function () {
     return view('vendor',  [
@@ -171,5 +174,8 @@ Route::get('/tambahPegawai', function () {
     return view('tambahPegawai');
 });
 
-Route::post('/login', [LoginController::class, 'login'])->name('login'); // Use LoginController
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// Login route
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+// Logout route
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
