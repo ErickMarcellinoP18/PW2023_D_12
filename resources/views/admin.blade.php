@@ -102,7 +102,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{('karyawan')}}">
+                        <a class="nav-link" href="{{('employee')}}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
                                 <g id="clarityEmployeeGroupSolid0" fill="currentColor">
                                     <ellipse cx="18" cy="11.28" rx="4.76" ry="4.7" />

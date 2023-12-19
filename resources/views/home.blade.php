@@ -333,7 +333,7 @@
         </div>
     </section>
 
-    <!-- Section 3: Contact -->
+    <!-- Section 4: Contact -->
     <section id="contact">
         <nav class="navbar navbar-dark custom-navbar">
             <div class="container-fluid" style="height: 70px;">
@@ -398,6 +398,7 @@
             </div>
         </nav>
     </section>
+
     <script>
         // Add smooth scrolling behavior to links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

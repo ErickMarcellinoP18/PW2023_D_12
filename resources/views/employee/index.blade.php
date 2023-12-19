@@ -69,6 +69,12 @@
             color: #fff;
         }
 
+        .custom-edit-button a {
+            color: white;
+            text-decoration: none;
+            /* Remove underline from the link */
+        }
+
         .btn-container .btn-danger {
             background-color: #d9534f;
             color: #fff;
@@ -147,26 +153,31 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Actions</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
             <tbody>
-                @forelse ($anggota as $item)
+                @forelse ($employee as $item)
                 <tr>
-                    <td><strong>{{ $item['nama'] }}</strong></td>
-                    <td>{{ $item['email'] }}</td>
-                    <td>{{ $item['telp'] }}</td>
+                    <td><strong>{{ $item['employee_name'] }}</strong></td>
+                    <td>{{ $item['employee_phone'] }}</td>
+                    <td>{{ $item['employee_position'] }}</td>
+                    <td>{{ $item['employee_salary'] }}</td>
                     <td>
                         <div class="btn-container">
+
                             <button type="submit" class="btn btn-primary">
                                 <a class="nav-link" href="#">Call</a>
                             </button>
                             <button type="submit" class="btn btn-warning">
-                                <a class="nav-link" href="{{('editKaryawan')}}">Edit</a>
+                                <a class="nav-link" href="{{route('employee.edit', $item->id_employee) }}">Edit</a>
                             </button>
+                            @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-danger">
                                 <a class="nav-link" href="#">Fire</a>
                             </button>
