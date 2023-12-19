@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Data</title>
+    <title>Vendor Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
@@ -69,6 +69,12 @@
             color: #fff;
         }
 
+        .custom-edit-button a {
+            color: white;
+            text-decoration: none;
+            /* Remove underline from the link */
+        }
+
         .btn-container .btn-danger {
             background-color: #d9534f;
             color: #fff;
@@ -83,7 +89,7 @@
                 <a href="{{asset('images\logoWhite.png')}}" class="navbar-brand">
                     <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
                 </a>
-                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Daftar Karyawan</h1>
+                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Vendor Data</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -101,7 +107,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{('employee')}}">
+                            <a class="nav-link" href="{{('karyawan')}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
                                     <g id="clarityEmployeeGroupSolid0" fill="currentColor">
                                         <ellipse cx="18" cy="11.28" rx="4.76" ry="4.7" />
@@ -147,35 +153,31 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Type</th>
+                    <th>Admin</th>
                     <th>Phone</th>
-                    <th>Position</th>
-                    <th>Salary</th>
                     <th>Action</th>
                 </tr>
             </thead>
 
             <tbody>
-                @forelse ($employee as $item)
+                @forelse ($vendor as $item)
                 <tr>
-                    <td><strong>{{ $item['employee_name'] }}</strong></td>
-                    <td>{{ $item['employee_phone'] }}</td>
-                    <td>{{ $item['employee_positui '] }}</td>
-                    <td>{{ $item['employee_salary'] }}</td>
+                    <td><strong>{{ $item['vendor_name'] }}</strong></td>
+                    <td>{{ $item['vendor_type'] }}</td>
+                    <td>{{ $item['vendor_admin'] }}</td>
+                    <td>{{ $item['vendor_phone'] }}</td>
                     <td>
                         <div class="btn-container">
-                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('movie.destroy', $item->id)}}" method="POST">
-                                <a href="{{route('movie.edit', $item->id) }}" class="btn btn-sm btn-primary">EDIT</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-                            </form>
 
                             <button type="submit" class="btn btn-primary">
                                 <a class="nav-link" href="#">Call</a>
                             </button>
                             <button type="submit" class="btn btn-warning">
-                                <a class="nav-link" href="#">Edit</a>
+                                <a class="nav-link" href="{{route('vendor.edit', $item->id_vendor) }}">Edit</a>
                             </button>
+                            @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-danger">
                                 <a class="nav-link" href="#">Fire</a>
                             </button>
@@ -185,7 +187,7 @@
                 @empty
                 <tr>
                     <td colspan="4" class="text-center alert alert-danger">
-                        Data Karyawan masih kosong.
+                        Data vendor masih kosong.
                     </td>
                 </tr>
                 @endforelse
