@@ -17,15 +17,10 @@ class EventController extends Controller
     {
         return view('event.create');
     }
+    
 
     public function store(Request $request)
     {
-        $request->validate([
-            'event_name' => 'required',
-            'event_date' => 'required',
-            'event_location' => 'required',
-            'event_description' => 'required',
-        ]);
 
         $this->validate($request, [
             'event_name' => 'required',
@@ -40,7 +35,8 @@ class EventController extends Controller
             'event_location' => $request->event_location,
             'event_description' => $request->event_description,
         ]);
-    return redirect()->route('event.index')->with('success', 'Berhasil menambah event baru!');
+    
+        return redirect()->route('event.index')->with('success', 'Berhasil menambah event baru!');
 
     }
 
@@ -59,5 +55,21 @@ class EventController extends Controller
             'event_location' => 'required',
             'event_description' => 'required',
         ]);
+
+        $event->event_name = $request->event_name;
+        $event->event_date = $request->event_date;
+        $event->event_location = $request->event_location;
+        $event->event_description = $request->event_description;
+        $event->save();
+
+        return redirect()->route('event.index')->with('success', 'Berhasil mengubah data event!');
+    }
+
+    public function destroy($id)
+    {
+        $event = Event::findOrFail($id);
+        $event->delete();
+
+        return redirect()->route('event.index')->with('success', 'Berhasil menghapus data event!');
     }
 }

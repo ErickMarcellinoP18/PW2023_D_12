@@ -18,7 +18,7 @@ class EmployeeController extends Controller
     public function index()
     {
         //get employee
-        $employee = Employee::orderBy('id_employee', 'desc')->paginate(10);
+        $employee = Employee::latest('id_employee')->paginate(10);
         //render view with posts
         return view('employee.index', compact('employee'));
     }
@@ -43,7 +43,6 @@ class EmployeeController extends Controller
     {
         //Validasi Formulir
         $this->validate($request, [
-            'id_employee' => 'required|unique:employee',
             'employee_name' => 'required',
             'employee_phone' => 'required',
             'employee_position' => 'required',
@@ -52,18 +51,13 @@ class EmployeeController extends Controller
 
         // Create the employee record in the database
         Employee::create([
-            'id_employee' => $request->id_employee,
             'employee_name' => $request->employee_name,
             'employee_phone' => $request->employee_phone,
             'employee_position' => $request->employee_position,
             'employee_salary' => $request->employee_salary,
         ]);
 
-        try{
-            return redirect()->route('employee.index');
-        }catch(Exception $e){
-            return redirect()->route('employee.index');
-        }
+        return redirect()->route('employee.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
     /**
@@ -74,7 +68,7 @@ class EmployeeController extends Controller
      */
     public function edit($id_employee)
     {
-        $employee = Employee::find($id_employee);
+        $employee = Employee::findOrFail($id_employee);
         return view('employee.edit', compact('employee'));
     }
 
@@ -87,7 +81,7 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id_employee)
     {
-        $employee = Employee::find($id_employee);
+        $employee = Employee::findOrFail($id_employee);
 
         $this->validate($request, [
             'employee_name' => 'required',
@@ -97,12 +91,11 @@ class EmployeeController extends Controller
         ]);
 
 
-        $employee->update([
-            'employee_name' => $request->employee_name,
-            'employee_phone' => $request->employee_phone,
-            'employee_position' => $request->employee_position,
-            'employee_salary' => $request->employee_salary,
-        ]);
+        $employee->employee_name = $request->employee_name;
+        $employee->employee_phone = $request->employee_phone;
+        $employee->employee_position = $request->employee_position;
+        $employee->employee_salary = $request->employee_salary;
+        $employee->save();
 
         return redirect()->route('employee.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
