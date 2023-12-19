@@ -43,6 +43,7 @@ class EmployeeController extends Controller
     {
         //Validasi Formulir
         $this->validate($request, [
+            'id_employee' => 'required|unique:employee',
             'employee_name' => 'required',
             'employee_phone' => 'required',
             'employee_position' => 'required',
@@ -51,6 +52,7 @@ class EmployeeController extends Controller
 
         // Create the employee record in the database
         Employee::create([
+            'id_employee' => $request->id_employee,
             'employee_name' => $request->employee_name,
             'employee_phone' => $request->employee_phone,
             'employee_position' => $request->employee_position,
