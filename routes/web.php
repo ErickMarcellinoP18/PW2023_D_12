@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,17 +45,24 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/admin', function () {
-    return view('admin');
-});
-
 Route::get('/vendor', function () {
     return view('vendor');
 });
 
-// Login route
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/admin', function () {
+    return view('admin', [
+        'dude' => [
+            'gambar' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwODZ-msfh5mYs7LmWCY3tWtF8vmH-RMwSOC8KM_am2w&s.jpg",
+            'nLengkap' => 'John Everest',
+            'nickname' => 'John',
+            'jabatan' => 'Senior Manager',
+            'ruang' => '3315'
+        ]
+    ]);
+});
 
-// Logout route
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::resource('/employee', EmployeeController::class);
+Route::resource('/vendor', VendorController::class);

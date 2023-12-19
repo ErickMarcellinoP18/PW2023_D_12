@@ -100,7 +100,7 @@ class EmployeeController extends Controller
             'employee_salary' => $request->employee_salary,
         ]);
 
-        return redirect()->route('employee.index')->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('employee.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
 

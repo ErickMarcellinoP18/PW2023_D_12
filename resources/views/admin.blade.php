@@ -148,7 +148,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <th>Nama Lengkap</th>
+                        <th>Nama</th>
                         <td>{{ $dude['nLengkap'] }}</td>
                     </tr>
                     <tr>
@@ -162,15 +162,6 @@
                 </table>
             </div>
         </div>
-        <div class="float-right col-3" style="margin-left:auto; text-align:right" ;>
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <button type="submit" style="width: 125px; height: 50px; border-radius: 8px; margin-left:-160px" class="btn btn-primary btn-block mb-3 mt-3">
-                    <a style="font-size:20px;" class="nav-link" href="{{('editAdmin')}}">
-                        <strong>Edit Data</strong></a>
-                </button>
-            </ul>
-        </div>
-        <br>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
