@@ -15,9 +15,9 @@ use App\Http\Controllers\LoginController;
 */
 
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::get('/home', function () {
     return view('home');
@@ -110,7 +110,7 @@ Route::get('/editAdmin', function () {
             'nickname' => 'John',
             'jabatan' => 'Senior Manager',
             'ruang' => '3315',
-            'password'=>'bekerjaYuk1!'
+            'password' => 'bekerjaYuk1!'
         ]
     ]);
 });
@@ -172,4 +172,4 @@ Route::get('/tambahPegawai', function () {
 });
 
 Route::post('/login', [LoginController::class, 'login'])->name('login'); // Use LoginController
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
