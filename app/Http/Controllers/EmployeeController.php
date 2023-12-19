@@ -57,7 +57,11 @@ class EmployeeController extends Controller
             'employee_salary' => $request->employee_salary,
         ]);
 
-        return view('employee.index')->with(['success' => 'Data Berhasil Ditambahkan!']);
+        try{
+            return redirect()->route('employee.index');
+        }catch(Exception $e){
+            return redirect()->route('employee.index');
+        }
     }
 
     /**
@@ -81,7 +85,8 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id_employee)
     {
-        // Validate Form Data
+        $employee = Employee::find($id_employee);
+
         $this->validate($request, [
             'employee_name' => 'required',
             'employee_phone' => 'required',
@@ -89,10 +94,7 @@ class EmployeeController extends Controller
             'employee_salary' => 'required',
         ]);
 
-        $employee = Employee::find($id_employee);
 
-
-        // Update the employee record in the database
         $employee->update([
             'employee_name' => $request->employee_name,
             'employee_phone' => $request->employee_phone,
