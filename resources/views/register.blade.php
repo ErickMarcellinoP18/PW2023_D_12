@@ -44,6 +44,7 @@
             width: 550px;
             height: 650px;
             border-radius: 50px;
+            overflow-y: auto;
         }
 
         .card {
@@ -74,6 +75,15 @@
             font-size: 20px;
             color: white;
         }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            /* Adjust the margin as needed */
+        }
     </style>
 
     <body>
@@ -83,6 +93,12 @@
                     <div class="card-body px-5 py-5 px-md-5">
                         <form class="form" method="post" action="{{ url('login') }}">
                             @csrf
+                            <div class="mb-3 logo-container">
+                                <a class="logo-link" href="{{ url('home') }}">
+                                    <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
+                                </a>
+                            </div>
+
                             <div class="mb-3">
                                 <label for="nameInput" class="form-label">Name</label>
                                 <input type="text" name="name" class="form-control" id="nameInput" required />

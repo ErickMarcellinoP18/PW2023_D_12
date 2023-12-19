@@ -89,8 +89,11 @@
                 <div class="card bg-glass">
                     <div class="card-body px-5 py-5 px-md-5">
                         <div class="logo">
-                            <img src="{{asset('images\logoWhite.png')}}" alt="logo login" />
+                            <a class="logo-link" href="{{ url('home') }}">
+                                <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
+                            </a>
                         </div>
+
                         <form class="form" method="post" action="{{ route('login') }}">
                             @csrf
                             <div class="mb-3">
