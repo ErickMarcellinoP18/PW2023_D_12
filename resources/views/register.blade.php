@@ -92,13 +92,12 @@
                 <div class="card bg-glass">
                     <div class="card-body px-5 py-5 px-md-5">
                         <form class="form" method="post" action="{{ url('login') }}">
-                            @csrf
+                            @csrf00
                             <div class="mb-3 logo-container">
                                 <a class="logo-link" href="{{ url('home') }}">
                                     <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
                                 </a>
                             </div>
-
                             <div class="mb-3">
                                 <label for="nameInput" class="form-label">Name</label>
                                 <input type="text" name="name" class="form-control" id="nameInput" required />
