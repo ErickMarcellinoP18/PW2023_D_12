@@ -57,7 +57,7 @@ class VendorController extends Controller
             'vendor_phone' => $request->vendor_phone,
         ]);
 
-        return redirect()->route('employee.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('vendor.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
     /**

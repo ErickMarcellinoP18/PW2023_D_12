@@ -110,12 +110,32 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('employee.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('vendor.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control @error('employee_name') is-invalid @enderror" name="employee_name" value="{{ old('employee_name') }}" placeholder="Enter Name">
-                        @error('employee_name')
+                        <input type="text" class="form-control @error('vendor_name') is-invalid @enderror" name="vendor_name" value="{{ old('vendor_name') }}" placeholder="Enter Name">
+                        @error('vendor_name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Type</label>
+                        <input type="text" class="form-control @error('vendor_type') is-invalid @enderror" name="vendor_type" value="{{ old('vendor_type') }}" placeholder="Enter Type">
+                        @error('vendor_type')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Admin</label>
+                        <input type="text" class="form-control @error('vendor_admin') is-invalid @enderror" name="vendor_admin" value="{{ old('vendor_admin') }}" placeholder="Enter Admin">
+                        @error('vendor_admin')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -124,28 +144,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Phone</label>
-                        <input type="text" class="form-control @error('employee_phone') is-invalid @enderror" name="employee_phone" value="{{ old('employee_phone') }}" placeholder="Enter Phone">
-                        @error('employee_phone')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Position</label>
-                        <input type="text" class="form-control @error('employee_position') is-invalid @enderror" name="employee_position" value="{{ old('employee_position') }}" placeholder="Enter Position">
-                        @error('employee_position')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Salary</label>
-                        <input type="double" class="form-control @error('employee_salary') is-invalid @enderror" name="employee_salary" value="{{ old('employee_salary') }}" placeholder="Enter Salary">
-                        @error('employee_salary')
+                        <input type="text" class="form-control @error('vendor_phone') is-invalid @enderror" name="vendor_phone" value="{{ old('vendor_phone') }}" placeholder="Enter Phone">
+                        @error('vendor_phone')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

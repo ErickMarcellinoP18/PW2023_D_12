@@ -127,7 +127,7 @@
     </header>
     <div class="container">
         <div class="btn-container">
-            <a href="{{('tambahPegawai')}}" class="add-employee-btn btn btn-block btn-success">
+            <a href="{{route('vendor.create')}}" class="add-employee-btn btn btn-block btn-success">
                 <strong class="text-white" style="font-size: 24px;"><span class="plus-logo">+</span> Add Vendor </strong>
             </a>
         </div>
