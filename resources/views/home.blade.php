@@ -437,6 +437,12 @@
 
             location.reload();
         }
+        function copyToClipboard() {
+            var inputElement = document.getElementById("{{ $agenda['budget'] }}");
+            inputElement.select();
+            document.execCommand("copy");
+        }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>

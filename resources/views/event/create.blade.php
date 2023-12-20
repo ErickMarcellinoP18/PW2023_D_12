@@ -1,5 +1,6 @@
 <?php
 include_once 'home.php';
+$hasil = copyToClipboard();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +84,7 @@ include_once 'home.php';
                     @csrf
                     <div class="form-group">
                         <label class="form-label">Location</label>
-                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{ $home->agenda->event_location }}" placeholder="Enter Location">
+                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{$result}}" placeholder="Enter Location">
                         @error('event_location')
                         <div class="invalid-feedback">
                             {{ $message }}
