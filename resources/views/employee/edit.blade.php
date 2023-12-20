@@ -61,43 +61,9 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a href="{{asset('images\logoWhite.png')}}" class="navbar-brand">
-                    <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
-                </a>
-                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Employee Page</h1>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-
-            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                <div class="bg-dark px-4">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{('admin')}}">
-                                Admin Page
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{('employee')}}">
-                                <strong>Employee Page</strong>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{('vendor')}}">
-                                Daftar Vendor
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <form method="POST" action="{{ route('logout') }}" id="logout-form">
-                                @csrf
-                                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Sign Out
-                                </a>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
+                <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
+                <h1 style="color: white; margin-left: -70px; margin-top: 10px">Edit Employee</h1>
+                <br>
             </div>
         </nav>
     </header>
