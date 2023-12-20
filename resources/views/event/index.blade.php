@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Data</title>
+    <title>Event Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
@@ -78,7 +78,7 @@
                 <a href="{{asset('images\logoWhite.png')}}" class="navbar-brand">
                     <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
                 </a>
-                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Employee Page</h1>
+                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Event Page</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -94,17 +94,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('employee')}}">
-                                <strong>Employee Page</strong>
+                                Karyawan Page
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('vendor')}}">
-                                Daftar Vendor
+                                Vendor Page
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('event')}}">
-                                Event Page
+                                <strong>Event Page</strong>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -122,38 +122,37 @@
     </header>
     <div class="container">
         <div class="btn-container">
-            <a href="{{route('employee.create')}}" class="add-employee-btn btn btn-block btn-success">
-                <strong class="text-white" style="font-size: 24px;"><span class="plus-logo">+</span> Add Employee </strong>
+            <a href="{{route('event.create')}}" class="add-event-btn btn btn-block btn-success">
+                <strong class="text-white" style="font-size: 24px;"><span class="plus-logo">+</span> Add Event </strong>
             </a>
         </div>
 
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Position</th>
-                    <th>Salary</th>
-                    <th>Action</th>
+                    <th>Location</th>
+                    <th>Budget</th>
+                    <th>Date</th>
+                    <th>Category</th>
                 </tr>
             </thead>
 
             <tbody>
-                @forelse ($employee as $item)
+                @forelse ($event as $item)
                 <tr>
-                    <td><strong>{{ $item['employee_name'] }}</strong></td>
-                    <td>{{ $item['employee_phone'] }}</td>
-                    <td>{{ $item['employee_position'] }}</td>
-                    <td>{{ $item['employee_salary'] }}</td>
+                    <td><strong>{{ $item['event_location'] }}</strong></td>
+                    <td>{{ $item['event_budget'] }}</td>
+                    <td>{{ $item['event_date'] }}</td>
+                    <td>{{ $item['event_category'] }}</td>
                     <td>
                         <div class="btn-container">
                             <button type="submit" class="btn btn-primary">
-                                <a class="nav-link" href="https://wa.me/{{ $item['employee_phone'] }}?">Call</a>
+                                <a class="nav-link" href="#">Call</a>
                             </button>
                             <button type="submit" class="btn btn-warning">
-                                <a class="nav-link" href="{{route('employee.edit', $item->id_employee) }}">Edit</a>
+                                <a class="nav-link" href="{{route('event.edit', $item->id_event) }}">Edit</a>
                             </button>
-                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('employee.destroy', $item->id_employee)}}" method="POST">
+                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('event.destroy', $item->id_event)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">
@@ -166,7 +165,7 @@
                 @empty
                 <tr>
                     <td colspan="4" class="text-center alert alert-danger">
-                        Data Karyawan masih kosong.
+                        Data event masih kosong.
                     </td>
                 </tr>
                 @endforelse

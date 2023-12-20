@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Data</title>
+    <title>Event Data</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -62,7 +62,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
-                <h1 style="color: white; margin-left: -70px; margin-top: 10px">Edit Employee</h1>
+                <h1 style="color: white; margin-left: -70px; margin-top: 10px">Create Event</h1>
                 <br>
             </div>
         </nav>
@@ -76,15 +76,12 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('employee.update', $employee->id_employee)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
-                    <!-- Modify your form fields like this -->
-
                     <div class="form-group">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control @error('employee_name') is-invalid @enderror" name="employee_name" value="{{ $employee->employee_name }}" placeholder="Enter Name">
-                        @error('employee_name')
+                        <input type="text" class="form-control @error('event_name') is-invalid @enderror" name="event_name" value="{{ old('event_name') }}" placeholder="Enter Name">
+                        @error('event_name')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -93,8 +90,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Phone</label>
-                        <input type="text" class="form-control @error('employee_phone') is-invalid @enderror" name="employee_phone" value="{{ $employee->employee_phone }}" placeholder="Enter Phone">
-                        @error('employee_phone')
+                        <input type="text" class="form-control @error('event_phone') is-invalid @enderror" name="event_phone" value="{{ old('event_phone') }}" placeholder="Enter Phone">
+                        @error('event_phone')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -103,8 +100,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Position</label>
-                        <input type="text" class="form-control @error('employee_position') is-invalid @enderror" name="employee_position" value="{{ $employee->employee_position }}" placeholder="Enter Position">
-                        @error('employee_position')
+                        <input type="text" class="form-control @error('event_position') is-invalid @enderror" name="event_position" value="{{ old('event_position') }}" placeholder="Enter Position">
+                        @error('event_position')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -113,14 +110,13 @@
 
                     <div class="form-group">
                         <label class="form-label">Salary</label>
-                        <input type="double" class="form-control @error('employee_salary') is-invalid @enderror" name="employee_salary" value="{{ $employee->employee_salary }}" placeholder="Enter Salary">
-                        @error('employee_salary')
+                        <input type="double" class="form-control @error('event_salary') is-invalid @enderror" name="event_salary" value="{{ old('event_salary') }}" placeholder="Enter Salary">
+                        @error('event_salary')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
-
 
                     <div class="form-group-button">
                         <button type="submit" class="btn btn-primary btn-block">SIMPAN</button>

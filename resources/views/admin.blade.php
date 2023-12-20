@@ -103,12 +103,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('employee')}}">
-                                Daftar Karyawan
+                                Karyawan Page
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('vendor')}}">
-                                Daftar Vendor
+                                Vendor Page
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{('event')}}">
+                                Event Page
                             </a>
                         </li>
                         <li class="nav-item">

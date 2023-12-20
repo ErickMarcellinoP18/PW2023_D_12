@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\VendorController;
-
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +50,10 @@ Route::get('/vendor', function () {
     return view('vendor');
 });
 
+Route::get('/event', function () {
+    return view('event');
+});
+
 Route::get('/admin', function () {
     return view('admin', [
         'dude' => [
@@ -66,3 +71,5 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('/employee', EmployeeController::class);
 Route::resource('/vendor', VendorController::class);
+Route::resource('/event', EventController::class);
+Route::resource('/customer', CustomerController::class);
