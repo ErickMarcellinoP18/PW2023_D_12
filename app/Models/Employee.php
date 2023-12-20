@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+
     protected $primaryKey = 'id_employee';
 
     protected $fillable = [
@@ -16,4 +17,7 @@ class Employee extends Model
         'employee_position',
         'employee_salary',
     ];
+
+    // Disable timestamps
+    public $timestamps = false;
 }
