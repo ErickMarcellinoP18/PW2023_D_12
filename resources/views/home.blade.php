@@ -306,7 +306,7 @@
                 </h5>
                 <div class="venue-card mx-auto">
                     @foreach ($agenda as $item)
-                    <a href="{{route('event.create')}}"><img src="{{ $item['gambar'] }}" alt="Venue 1"></a>
+                    <a href="{{route('event.create')}}"><img src="{{ $item['gambar'] }}" alt=" Venue 1"></a>
                     @endforeach
                 </div>
             </div>
@@ -321,16 +321,7 @@
                     &nbsp;&nbsp;Package Choice
                 </h5>
 
-
                 <div class="venue-card mx-auto">
-
-                    <tr>
-                        <td>{{ $item['gambar'] }}</td>
-                        <td>{{ $item['lokasi'] }}</td>
-                        <td>{{ $item['budget'] }}</td>
-                        <td>{{ $item['tanggal'] }}</td>
-                        <td>{{ $item['kategori'] }}</td>
-                    </tr>
 
                     <!-- <a href="{{route('event.create')}}"><img src="{{ asset('images/Package.jpeg') }}" alt="Package 1"></a>
                     <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package2.jpeg') }}" alt="Package 2"></a>

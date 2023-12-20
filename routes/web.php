@@ -23,43 +23,33 @@ Route::get('/', function () {
         'agenda' => [
             [
                 'id' => '1',
-                'gambar' => "{{ asset('images/Venue2.jpeg') }}",
+                'gambar' => asset('images/Venue2.jpeg'),
                 'lokasi' => 'Yogyakata',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
                 'id' => '2',
-                'gambar' => "{{ asset('images/Venue3.jpeg') }}",
+                'gambar' => asset('images/Venue3.jpeg'),
                 'lokasi' => 'Jakarta',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
                 'id' => '3',
-                'gambar' => "{{ asset('images/Venue4.jpeg') }}",
+                'gambar' => asset('images/Venue4.jpeg'),
                 'lokasi' => 'Bandung',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
                 'id' => '4',
-                'gambar' => "{{ asset('images/Venue6.jpeg') }}",
+                'gambar' => asset('images/Venue6.jpeg'),
                 'lokasi' => 'Surabaya',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
                 'id' => '5',
-                'gambar' => "{{ asset('images/Venue5.jpeg') }}",
+                'gambar' => asset('images/Venue5.jpeg'),
                 'lokasi' => 'Semarang',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ]
         ]
     ]);
@@ -69,39 +59,34 @@ Route::get('/home', function () {
     return view('home', [
         'agenda' => [
             [
-                'gambar' => "{{ asset('images/Venue2.jpeg') }}",
+                'id' => '1',
+                'gambar' => asset('images/Venue2.jpeg'),
                 'lokasi' => 'Yogyakata',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
-                'gambar' => "{{ asset('images/Venue3.jpeg') }}",
+                'id' => '2',
+                'gambar' => asset('images/Venue3.jpeg'),
                 'lokasi' => 'Jakarta',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
-                'gambar' => "{{ asset('images/Venue4.jpeg') }}",
+                'id' => '3',
+                'gambar' => asset('images/Venue4.jpeg'),
                 'lokasi' => 'Bandung',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
-                'gambar' => "{{ asset('images/Venue6.jpeg') }}",
+                'id' => '4',
+                'gambar' => asset('images/Venue6.jpeg'),
                 'lokasi' => 'Surabaya',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ],
             [
-                'gambar' => "{{ asset('images/Venue5.jpeg') }}",
+                'id' => '5',
+                'gambar' => asset('images/Venue5.jpeg'),
                 'lokasi' => 'Semarang',
                 'budget' => '10000000',
-                'tanggal' => 'null',
-                'kategori' => 'null'
             ]
         ]
     ]);
