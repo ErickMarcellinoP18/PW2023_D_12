@@ -98,11 +98,11 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="usernameInput" class="form-label">Username</label>
-                                <input type="text" name="username" class="form-control" id="usernameInput" required />
+                                <input type="text" name="customer_username" class="form-control" id="usernameInput" required />
                             </div>
                             <div class="mb-3">
                                 <label for="passInput" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="passInput" required />
+                                <input type="password" name="customer_password" class="form-control" id="passInput" required />
                             </div>
 
                             <button type="button" class="btn btn-link"><a class="nav-link" href="{{ url('/')}}">Forgot Password?</a></button>

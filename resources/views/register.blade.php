@@ -91,8 +91,8 @@
             <div class="col-lg-6 mb-5 mb-lg-0 position-center">
                 <div class="card bg-glass">
                     <div class="card-body px-5 py-5 px-md-5">
-                        <form class="form" method="post" action="{{ url('login') }}">
-                            @csrf00
+                        <form class="form" method="post" action="{{ route('store') }}">
+                            @csrf
                             <div class="mb-3 logo-container">
                                 <a class="logo-link" href="{{ url('home') }}">
                                     <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
@@ -100,23 +100,23 @@
                             </div>
                             <div class="mb-3">
                                 <label for="nameInput" class="form-label">Name</label>
-                                <input type="text" name="name" class="form-control" id="nameInput" required />
+                                <input type="text" name="customer_name" class="form-control" id="nameInput" required />
                             </div>
                             <div class="mb-3">
                                 <label for="phoneInput" class="form-label">Phone</label>
-                                <input type="text" name="phone" class="form-control" id="phoneInput" required />
+                                <input type="text" name="customer_phone" class="form-control" id="phoneInput" required />
                             </div>
                             <div class="mb-3">
                                 <label for="addressInput" class="form-label">Address</label>
-                                <input type="text" name="address" class="form-control" id="addressInput" required />
+                                <input type="text" name="customer_address" class="form-control" id="addressInput" required />
                             </div>
                             <div class="mb-3">
                                 <label for="usernameInput" class="form-label">Username</label>
-                                <input type="text" name="username" class="form-control" id="usernameInput" required />
+                                <input type="text" name="customer_username" class="form-control" id="usernameInput" required />
                             </div>
                             <div class="mb-3">
                                 <label for="passInput" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="passInput" required />
+                                <input type="password" name="customer_password" class="form-control" id="passInput" required />
                             </div>
                             <button type="submit" style="width: auto; border-radius: 15px;" class="btn btn-primary btn-block mb-2">Register</button>
                         </form>

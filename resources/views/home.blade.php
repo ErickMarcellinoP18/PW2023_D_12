@@ -288,9 +288,9 @@
                         <p class="card-text-isi">"The perfect solution for your wedding needs! We are professional wedding event organizer,
                             ready to provide an exceptional experience in planning and executing various types of wedding dreams.</p>
                         <p> &nbsp</p>
-                        <p <p class="card-text-isi">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
+                        <p class="card-text-isi">With our experienced team, trusted vendor network, and our commitment to client satisfaction,
                             we have built a reputation as the top choice in the industry. Trust us to turn your wedding vision into an
-                            unforgettable reality." </p>
+                            unforgettable reality." </class=>
                     </div>
                 </div>
             </div>

@@ -123,9 +123,8 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('register', [CustomerController::class, 'register']);
+Route::post('register/action', [CustomerController::class, 'store'])->name('store');
 
 Route::get('/vendor', function () {
     return view('vendor');
@@ -147,7 +146,7 @@ Route::get('/admin', function () {
     ]);
 });
 
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('login', [CustomerController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('/employee', EmployeeController::class);
