@@ -23,31 +23,36 @@ Route::get('/', function () {
         'agenda' => [
             [
                 'id' => '1',
-                'gambar' => asset('images/Venue2.jpeg'),
+                'venue' => asset('images/Venue2.jpeg'),
+                'package' => asset('images/Package2.jpeg'),
                 'lokasi' => 'Yogyakata',
                 'budget' => '10000000',
             ],
             [
                 'id' => '2',
-                'gambar' => asset('images/Venue3.jpeg'),
+                'venue' => asset('images/Venue3.jpeg'),
+                'package' => asset('images/Package3.jpeg'),
                 'lokasi' => 'Jakarta',
                 'budget' => '10000000',
             ],
             [
                 'id' => '3',
-                'gambar' => asset('images/Venue4.jpeg'),
+                'venue' => asset('images/Venue4.jpeg'),
+                'package' => asset('images/Package4.jpeg'),
                 'lokasi' => 'Bandung',
                 'budget' => '10000000',
             ],
             [
                 'id' => '4',
-                'gambar' => asset('images/Venue6.jpeg'),
+                'venue' => asset('images/Venue6.jpeg'),
+                'package' => asset('images/Package.jpeg'),
                 'lokasi' => 'Surabaya',
                 'budget' => '10000000',
             ],
             [
                 'id' => '5',
-                'gambar' => asset('images/Venue5.jpeg'),
+                'venue' => asset('images/Venue5.jpeg'),
+                'package' => asset('images/Package5.jpeg'),
                 'lokasi' => 'Semarang',
                 'budget' => '10000000',
             ]
@@ -60,31 +65,36 @@ Route::get('/home', function () {
         'agenda' => [
             [
                 'id' => '1',
-                'gambar' => asset('images/Venue2.jpeg'),
+                'venue' => asset('images/Venue2.jpeg'),
+                'package' => asset('images/Venue2.jpeg'),
                 'lokasi' => 'Yogyakata',
                 'budget' => '10000000',
             ],
             [
                 'id' => '2',
-                'gambar' => asset('images/Venue3.jpeg'),
+                'venue' => asset('images/Venue3.jpeg'),
+                'package' => asset('images/Venue3.jpeg'),
                 'lokasi' => 'Jakarta',
                 'budget' => '10000000',
             ],
             [
                 'id' => '3',
-                'gambar' => asset('images/Venue4.jpeg'),
+                'venue' => asset('images/Venue4.jpeg'),
+                'package' => asset('images/Venue4.jpeg'),
                 'lokasi' => 'Bandung',
                 'budget' => '10000000',
             ],
             [
                 'id' => '4',
-                'gambar' => asset('images/Venue6.jpeg'),
+                'venue' => asset('images/Venue6.jpeg'),
+                'package' => asset('images/Pacakge.jpeg'),
                 'lokasi' => 'Surabaya',
                 'budget' => '10000000',
             ],
             [
                 'id' => '5',
-                'gambar' => asset('images/Venue5.jpeg'),
+                'venue' => asset('images/Venue5.jpeg'),
+                'package' => asset('images/Venue5.jpeg'),
                 'lokasi' => 'Semarang',
                 'budget' => '10000000',
             ]

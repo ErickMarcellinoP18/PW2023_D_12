@@ -306,7 +306,7 @@
                 </h5>
                 <div class="venue-card mx-auto">
                     @foreach ($agenda as $item)
-                    <a href="{{route('event.create')}}"><img src="{{ $item['gambar'] }}" alt=" Venue 1"></a>
+                    <a href="{{route('event.create')}}"><img src="{{ $item['venue'] }}" alt=" Venue"></a>
                     @endforeach
                 </div>
             </div>
@@ -322,12 +322,9 @@
                 </h5>
 
                 <div class="venue-card mx-auto">
-
-                    <!-- <a href="{{route('event.create')}}"><img src="{{ asset('images/Package.jpeg') }}" alt="Package 1"></a>
-                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package2.jpeg') }}" alt="Package 2"></a>
-                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package3.jpeg') }}" alt="Package 3"></a>
-                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package4.jpeg') }}" alt="Package 4"></a>
-                    <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package5.jpeg') }}" alt="Package 5"></a> -->
+                    @foreach ($agenda as $item)
+                    <a href="{{route('event.create')}}"><img src="{{ $item['package'] }}" alt=" Package"></a>
+                    @endforeach
                 </div>
 
             </div>
