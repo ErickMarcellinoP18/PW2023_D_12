@@ -89,7 +89,7 @@
                 <div class="card bg-glass">
                     <div class="card-body px-5 py-5 px-md-5">
                         <div class="logo">
-                            <a class="logo-link" href="{{ url('home') }}">
+                            <a class="logo-link" href="{{ url('/') }}">
                                 <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
                             </a>
                         </div>

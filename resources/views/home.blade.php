@@ -323,7 +323,7 @@
 
                 <div class="venue-card mx-auto">
                     @foreach ($agenda as $item)
-                    <a href="{{route('event.create')}}"><img src="{{ $item['package'] }}" alt=" Package"></a>
+                    <a href="{{route('event.create')}}" onclick="copyToClipnoard()"><img src="{{ $item['package'] }}" alt=" Package"></a>
                     @endforeach
                 </div>
 
@@ -437,8 +437,14 @@
 
             location.reload();
         }
-    </script>
 
+        function copyToClipboard() {
+            var inputElement = document.getElementById("{{ $agenda['lokasi'] }}");
+            inputElement.select();
+            document.execCommand("copy");
+        }
+    </script>
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 

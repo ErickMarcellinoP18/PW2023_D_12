@@ -1,3 +1,6 @@
+<?php
+include_once 'home.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +83,7 @@
                     @csrf
                     <div class="form-group">
                         <label class="form-label">Location</label>
-                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{ old('event_location') }}" placeholder="Enter Name">
+                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{ $home->agenda->event_location }}" placeholder="Enter Location">
                         @error('event_location')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -103,7 +106,7 @@
                         <input type="date" class="form-control @error('event_date') is-invalid @enderror" name="event_date" value="{{ old('event_date') }}" placeholder="Enter Position">
                         @error('event_date')
                         <div class="invalid-feedback">
-                            {{ $message }}
+                         {{ $message }}
                         </div>
                         @enderror
                     </div>

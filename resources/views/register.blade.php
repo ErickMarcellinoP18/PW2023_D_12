@@ -94,7 +94,7 @@
                         <form class="form" method="post" action="{{ route('store') }}">
                             @csrf
                             <div class="mb-3 logo-container">
-                                <a class="logo-link" href="{{ url('home') }}">
+                                <a class="logo-link" href="{{ url('/') }}">
                                     <img src="{{ asset('images/logoWhite.png') }}" alt="Logo">
                                 </a>
                             </div>
