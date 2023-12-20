@@ -107,6 +107,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{('vendor')}}">
+                                Vendor Page
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}" id="logout-form">
                                 @csrf
                                 <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
