@@ -79,9 +79,9 @@
                 <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control @error('event_name') is-invalid @enderror" name="event_name" value="{{ old('event_name') }}" placeholder="Enter Name">
-                        @error('event_name')
+                        <label class="form-label">Location</label>
+                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{ old('event_location') }}" placeholder="Enter Name">
+                        @error('event_location')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -89,9 +89,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Phone</label>
-                        <input type="text" class="form-control @error('event_phone') is-invalid @enderror" name="event_phone" value="{{ old('event_phone') }}" placeholder="Enter Phone">
-                        @error('event_phone')
+                        <label class="form-label">Budget</label>
+                        <input type="text" class="form-control @error('event_budget') is-invalid @enderror" name="event_budget" value="{{ old('event_budget') }}" placeholder="Enter Phone">
+                        @error('event_budget')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -99,9 +99,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Position</label>
-                        <input type="text" class="form-control @error('event_position') is-invalid @enderror" name="event_position" value="{{ old('event_position') }}" placeholder="Enter Position">
-                        @error('event_position')
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-control @error('event_date') is-invalid @enderror" name="event_date" value="{{ old('event_date') }}" placeholder="Enter Position">
+                        @error('event_date')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -109,9 +109,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Salary</label>
-                        <input type="double" class="form-control @error('event_salary') is-invalid @enderror" name="event_salary" value="{{ old('event_salary') }}" placeholder="Enter Salary">
-                        @error('event_salary')
+                        <label class="form-label">Category</label>
+                        <input type="text" class="form-control @error('event_categroy') is-invalid @enderror" name="event_categroy" value="{{ old('event_categroy') }}" placeholder="Enter Salary">
+                        @error('event_categroy')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -121,7 +121,6 @@
                     <div class="form-group-button">
                         <button type="submit" class="btn btn-primary btn-block">SIMPAN</button>
                     </div>
-
                 </form>
             </div>
         </div>

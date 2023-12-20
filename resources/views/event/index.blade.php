@@ -70,7 +70,6 @@
     </style>
 </head>
 
-
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark">
@@ -134,21 +133,19 @@
                     <th>Budget</th>
                     <th>Date</th>
                     <th>Category</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
             <tbody>
                 @forelse ($event as $item)
                 <tr>
-                    <td><strong>{{ $item['event_location'] }}</strong></td>
-                    <td>{{ $item['event_budget'] }}</td>
-                    <td>{{ $item['event_date'] }}</td>
-                    <td>{{ $item['event_category'] }}</td>
+                    <td><strong>{{ $item->location }}</strong></td>
+                    <td>{{ $item->budget }}</td>
+                    <td>{{ $item->date }}</td>
+                    <td>{{ $item->category }}</td>
                     <td>
                         <div class="btn-container">
-                            <button type="submit" class="btn btn-primary">
-                                <a class="nav-link" href="#">Call</a>
-                            </button>
                             <button type="submit" class="btn btn-warning">
                                 <a class="nav-link" href="{{route('event.edit', $item->id_event) }}">Edit</a>
                             </button>

@@ -10,10 +10,15 @@ use App\Models\Event;
 
 class EventController extends Controller
 {
+    /**
+     * indexA
+     *
+     * @return void
+     */
     public function index()
     {
-        $event = Event::orderBy('id_event', 'desc')->paginate(10);
-        return view('event.index', compact('events'));
+        $event = Event::latest('id_event')->paginate(10);
+        return view('event.index', compact('event'));
     }
 
     public function create()
@@ -26,51 +31,51 @@ class EventController extends Controller
     {
 
         $this->validate($request, [
-            'event_location' => 'required',
-            'event_date' => 'required',
-            'event_budget' => 'required',
-            'event_category' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'budget' => 'required',
+            'category' => 'required'
         ]);
 
         Event::create([
-            'event_location' => $request->event_location,
-            'event_date' => $request->event_date,
-            'event_budget' => $request->event_budget,
-            'event_category' => $request->event_category,
+            'location' => $request->location,
+            'date' => $request->date,
+            'budget' => $request->budget,
+            'category' => $request->category,
         ]);
 
         return redirect()->route('event.index')->with('success', 'Berhasil menambah event baru!');
     }
 
-    public function edit($id)
+    public function edit($id_event)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::findOrFail($id_event);
         return view('event.edit', compact('event'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_event)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::findOrFail($id_event);
 
         $this->validate($request, [
-            'event_location' => 'required',
-            'event_date' => 'required',
-            'event_budget' => 'required',
-            'event_category' => 'required'
+            'location' => 'required',
+            'date' => 'required',
+            'budget' => 'required',
+            'category' => 'required'
         ]);
 
-        $event->event_location = $request->event_location;
-        $event->event_date = $request->event_date;
-        $event->event_budget = $request->event_budget;
-        $event->event_category = $request->event_category;
+        $event->location = $request->location;
+        $event->date = $request->date;
+        $event->budget = $request->budget;
+        $event->category = $request->category;
         $event->save();
 
         return redirect()->route('event.index')->with('success', 'Berhasil mengubah data event!');
     }
 
-    public function destroy($id)
+    public function destroy($id_event)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::findOrFail($id_event);
         $event->delete();
 
         return redirect()->route('event.index')->with('success', 'Berhasil menghapus data event!');
