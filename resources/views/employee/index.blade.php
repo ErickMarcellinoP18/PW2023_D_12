@@ -142,18 +142,19 @@
                     <td>{{ $item['employee_salary'] }}</td>
                     <td>
                         <div class="btn-container">
-
                             <button type="submit" class="btn btn-primary">
                                 <a class="nav-link" href="#">Call</a>
                             </button>
                             <button type="submit" class="btn btn-warning">
                                 <a class="nav-link" href="{{route('employee.edit', $item->id_employee) }}">Edit</a>
                             </button>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">
-                                <a class="nav-link" href="#">Fire</a>
-                            </button>
+                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('employee.destroy', $item->id_employee)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    <a class="nav-link" href="#">Fire</a>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>

@@ -88,7 +88,7 @@
                 <a href="{{asset('images\logoWhite.png')}}" class="navbar-brand">
                     <img style="width: 5rem" src="{{asset('images\logoWhite.png')}}" alt="logo" />
                 </a>
-                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Employee Page</h1>
+                <h1 style="color: white; margin-left: -40px; margin-top: 10px">Vendor Page</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -109,7 +109,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{('vendor')}}">
-                                <strong>Daftar Vendor</strong>
+                                <strong>Vendor Page</strong>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -128,7 +128,7 @@
     <div class="container">
         <div class="btn-container">
             <a href="{{('tambahPegawai')}}" class="add-employee-btn btn btn-block btn-success">
-                <strong class="text-white" style="font-size: 24px;"><span class="plus-logo">+</span> Add Employee </strong>
+                <strong class="text-white" style="font-size: 24px;"><span class="plus-logo">+</span> Add Vendor </strong>
             </a>
         </div>
 
