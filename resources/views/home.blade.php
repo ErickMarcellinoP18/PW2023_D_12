@@ -305,11 +305,9 @@
                     &nbsp;&nbsp;Venue Choice
                 </h5>
                 <div class="venue-card mx-auto">
-                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue2.jpeg') }}" alt="Venue 1"></a>
-                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue3.jpeg') }}" alt="Venue 2"></a>
-                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue4.jpeg') }}" alt="Venue 3"></a>
-                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue6.jpeg') }}" alt="Venue 4"></a>
-                    <a href="{{ url('customer1') }}"><img src="{{ asset('images/Venue5.jpeg') }}" alt="Venue 5"></a>
+                    @foreach ($agenda as $item)
+                    <a href="{{route('event.create')}}"><img src="{{ $item['gambar'] }}" alt="Venue 1"></a>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -322,17 +320,17 @@
                 <h5 class="text-center mb-4"><img src="{{ asset('images/logoTextOnly.png') }}" alt="" style="width: 10rem;">
                     &nbsp;&nbsp;Package Choice
                 </h5>
-                @foreach ($agenda as $item)
+
 
                 <div class="venue-card mx-auto">
 
-                <tr>
-                    <td>{{ $item['gambar'] }}</td>
-                    <td>{{ $item['lokasi'] }}</td>
-                    <td>{{ $item['budget'] }}</td>
-                    <td>{{ $item['tanggal'] }}</td>
-                    <td>{{ $item['kategori'] }}</td>
-                </tr>
+                    <tr>
+                        <td>{{ $item['gambar'] }}</td>
+                        <td>{{ $item['lokasi'] }}</td>
+                        <td>{{ $item['budget'] }}</td>
+                        <td>{{ $item['tanggal'] }}</td>
+                        <td>{{ $item['kategori'] }}</td>
+                    </tr>
 
                     <!-- <a href="{{route('event.create')}}"><img src="{{ asset('images/Package.jpeg') }}" alt="Package 1"></a>
                     <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package2.jpeg') }}" alt="Package 2"></a>
@@ -340,7 +338,7 @@
                     <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package4.jpeg') }}" alt="Package 4"></a>
                     <a href="{{ url('customer2') }}"><img src="{{ asset('images/Package5.jpeg') }}" alt="Package 5"></a> -->
                 </div>
-                @endforeach
+
             </div>
         </div>
     </section>
