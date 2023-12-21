@@ -68,7 +68,7 @@ class VendorController extends Controller
      */
     public function edit($id_vendor)
     {
-        $vendor = Vendor::findOrFail($id_vendor);
+        $vendor = Vendor::find($id_vendor);
         return view('vendor.edit', compact('vendor'));
     }
 
@@ -89,7 +89,7 @@ class VendorController extends Controller
             'vendor_phone' => 'required',
         ]);
 
-        $vendor = Vendor::findOrFail($id_vendor);
+        $vendor = Vendor::find($id_vendor);
 
 
         // Update the vendor record in the database
@@ -112,7 +112,7 @@ class VendorController extends Controller
      */
     public function destroy($id_vendor)
     {
-        $vendor = Vendor::findOrFail($id_vendor);
+        $vendor = Vendor::find($id_vendor);
         $vendor->delete();
         return redirect()->route('vendor.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
