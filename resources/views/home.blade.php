@@ -201,7 +201,7 @@
             margin-top: 5px;
         }
 
-        h3 {
+        .none {
             color: white;
             text-align: right;
             margin-top: -75px;
@@ -211,8 +211,26 @@
             letter-spacing: 5px;
         }
 
+        .btn-primary {
+            background-color: white;
+            font-size: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #74583E;
+            border: 3px solid #74583E;
+        }
+
         .custom-navbar {
             background-color: #74583E;
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+            font-family: 'Courier Prime';
+            word-spacing: 5px;
+            letter-spacing: 5px;
         }
     </style>
 </head>
@@ -323,7 +341,7 @@
 
                 <div class="venue-card mx-auto">
                     @foreach ($agenda as $item)
-                    <a href="{{route('event.create')}}" onclick="copyToClipboard()"><img src="{{ $item['package'] }}" alt=" Package"></a>
+                    <a href="{{route('event.create')}}"><img src="{{ $item['package'] }}" alt=" Package"></a>
                     @endforeach
                 </div>
 
@@ -332,7 +350,16 @@
     </section>
 
     <!-- Section 4: Contact -->
-    <section id="contact">
+    <section id="contact" style="background-color: #74583E; margin-top: 50px;color: white; margin-bottom:50px;width:90%;margin-left:80px; border-radius:20px">
+        <div class="container text-center">
+            <h3>We'd love to hear from you. <br>Reach out to us for any inquiries or assistance.</h3>
+            <a href="/customer1" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+
+    <!-- Section 5: Contact -->
+    <section id="none">
         <nav class="navbar navbar-dark custom-navbar">
             <div class="container-fluid" style="height: 70px;">
                 <a class="navbar-brand-footer">
@@ -391,7 +418,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Dreams Come True</h3>
+                    <h3 class="none">Dreams Come True</h3>
                 </div>
             </div>
         </nav>
@@ -437,12 +464,6 @@
 
             location.reload();
         }
-        function copyToClipboard() {
-            var inputElement = document.getElementById("{{ $agenda[0]['budget'] }}");
-            inputElement.select();
-            document.execCommand("copy");
-        }
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>

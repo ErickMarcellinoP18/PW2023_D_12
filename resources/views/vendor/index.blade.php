@@ -108,6 +108,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{('event')}}">
+                                Event Page
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{('vendor')}}">
                                 <strong>Vendor Page</strong>
                             </a>
