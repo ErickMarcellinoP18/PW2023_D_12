@@ -76,13 +76,13 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('employee.update', $employee->id_employee)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('event.update', $event->id_event)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
                         <label class="form-label">Location</label>
-                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="employee_name" value="{{ old('event_location') }}" placeholder="Enter Location">
-                        @error('event_location')
+                        <input type="text" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}" placeholder="Enter Location">
+                        @error('location')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -91,8 +91,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Budget</label>
-                        <input type="double" class="form-control @error('event_budget') is-invalid @enderror" name="event_budget" value="{{ old('event_budget') }}" placeholder="Enter Budget">
-                        @error('event_budget')
+                        <input type="double" class="form-control @error('budget') is-invalid @enderror" name="budget" value="{{ old('budget') }}" placeholder="Enter Budget">
+                        @error('budget')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -101,8 +101,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Category</label>
-                        <input type="text" class="form-control @error('event_category') is-invalid @enderror" name="event_category" value="{{ old('event_category') }}" placeholder="Enter Category">
-                        @error('event_category')
+                        <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" placeholder="Enter Category">
+                        @error('category')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -111,8 +111,8 @@
 
                     <div class="form-group">
                         <label class="form-label">Date</label>
-                        <input type="date" class="form-control @error('event_date') is-invalid @enderror" name="event_date" value="{{ old('event_date') }}" placeholder="Enter Date">
-                        @error('event_date')
+                        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" placeholder="Enter Date">
+                        @error('date')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

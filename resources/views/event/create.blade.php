@@ -1,7 +1,3 @@
-<?php
-include_once 'home.php';
-$hasil = copyToClipboard();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,8 +80,8 @@ $hasil = copyToClipboard();
                     @csrf
                     <div class="form-group">
                         <label class="form-label">Location</label>
-                        <input type="text" class="form-control @error('event_location') is-invalid @enderror" name="event_location" value="{{$result}}" placeholder="Enter Location">
-                        @error('event_location')
+                        <input type="text" class="form-control @error('location') is-invalid @enderror" name="location" value="{{old('location')}}" placeholder="Enter Location">
+                        @error('location')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -94,8 +90,8 @@ $hasil = copyToClipboard();
 
                     <div class="form-group">
                         <label class="form-label">Budget</label>
-                        <input type="text" class="form-control @error('event_budget') is-invalid @enderror" name="event_budget" value="{{ old('event_budget') }}" placeholder="Enter Phone">
-                        @error('event_budget')
+                        <input type="text" class="form-control @error('budget') is-invalid @enderror" name="budget" value="{{ old('budget') }}" placeholder="Enter Budget">
+                        @error('budget')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
@@ -104,18 +100,18 @@ $hasil = copyToClipboard();
 
                     <div class="form-group">
                         <label class="form-label">Date</label>
-                        <input type="date" class="form-control @error('event_date') is-invalid @enderror" name="event_date" value="{{ old('event_date') }}" placeholder="Enter Position">
-                        @error('event_date')
+                        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" placeholder="Enter Date">
+                        @error('date')
                         <div class="invalid-feedback">
-                         {{ $message }}
+                            {{ $message }}
                         </div>
                         @enderror
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">Category</label>
-                        <input type="text" class="form-control @error('event_categroy') is-invalid @enderror" name="event_categroy" value="{{ old('event_categroy') }}" placeholder="Enter Salary">
-                        @error('event_categroy')
+                        <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" placeholder="Enter Category">
+                        @error('category')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
