@@ -157,9 +157,12 @@
                     <td>{{ $item['vendor_phone'] }}</td>
                     <td>
                         <div class="btn-container">
+<<<<<<< HEAD
                         <button type="submit" class="btn btn-primary">
                             <a class="nav-link" href="https://wa.me/+62{{ $item['_phone'] }}?">Call</a>
                         </button>
+=======
+>>>>>>> 26fde428aa066d009d4a7b46defdf5e338e466ce
                             <button type="submit" class="btn btn-warning">
                                 <a class="nav-link" href="{{route('vendor.edit', $item->id_vendor) }}">Edit</a>
                             </button>
