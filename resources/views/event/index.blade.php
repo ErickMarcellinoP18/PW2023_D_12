@@ -158,7 +158,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">
-                                    <a class="nav-link" href="#">Fire</a>
+                                    <a class="nav-link" href="#">Delete Event</a>
                                 </button>
                             </form>
                         </div>

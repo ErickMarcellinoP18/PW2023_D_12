@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Phone (with country code without +)</label>
+                        <label class="form-label">Phone</label>
                         <input type="text" class="form-control @error('employee_phone') is-invalid @enderror" name="employee_phone" value="{{ old('employee_phone') }}" placeholder="Enter Phone">
                         @error('employee_phone')
                         <div class="invalid-feedback">

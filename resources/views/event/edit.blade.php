@@ -81,7 +81,7 @@
                     @method('PUT')
                     <div class="form-group">
                         <label class="form-label">Location</label>
-                        <input type="text" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}" placeholder="Enter Location">
+                        <input type="text" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ $event->location }}" placeholder="Enter Location">
                         @error('location')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -91,7 +91,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Budget</label>
-                        <input type="double" class="form-control @error('budget') is-invalid @enderror" name="budget" value="{{ old('budget') }}" placeholder="Enter Budget">
+                        <input type="double" class="form-control @error('budget') is-invalid @enderror" name="budget" value="{{ $event->budget }}" placeholder="Enter Budget">
                         @error('budget')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -101,7 +101,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Category</label>
-                        <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" placeholder="Enter Category">
+                        <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ $event->category }}" placeholder="Enter Category">
                         @error('category')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -111,7 +111,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Date</label>
-                        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" placeholder="Enter Date">
+                        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ $event->date }}" placeholder="Enter Date">
                         @error('date')
                         <div class="invalid-feedback">
                             {{ $message }}

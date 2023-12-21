@@ -113,7 +113,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Phone</label>
-                        <input type="text" class="form-control @error('vendor_phone') is-invalid @enderror" name="vendor_phone" value="{{ $vendor->vendor_phone }}" placeholder="Enter Salary">
+                        <input type="text" class="form-control @error('vendor_phone') is-invalid @enderror" name="vendor_phone" value="{{ $vendor->vendor_phone }}" placeholder="Enter Phone">
                         @error('vendor_phone')
                         <div class="invalid-feedback">
                             {{ $message }}

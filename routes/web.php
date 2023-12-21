@@ -43,7 +43,7 @@ Route::get('/', function () {
             ]
         ]
     ]);
-});
+})->name('home');
 
 Route::get('/home', function () {
     return view('home', [
@@ -70,7 +70,7 @@ Route::get('/home', function () {
             ]
         ]
     ]);
-});
+})->name('home');
 
 Route::get('/customer1', function () {
     return view('customer1');

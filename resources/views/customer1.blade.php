@@ -74,7 +74,7 @@
 
     .customer-item img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 90%;
     }
 
     .whatsapp-link {
@@ -104,20 +104,20 @@
     </header>
     <section class="customer-content">
         <div class="customer-item">
-            <img src="{{ asset('images/Venue4.jpeg') }}" alt="Product 1">
-            <a class="whatsapp-link" href="https://wa.me/081394887296?text=Hallo! Saya tertarik dengan Venue 1.">
+            <img src="{{ asset('images/Admin1.jpeg') }}" alt="Product 1">
+            <a class="whatsapp-link" href="https://wa.me/+6281394887296?text=Kontak Admin Enrique - 200710873">
                 Chat Admin WhatsApp
             </a>
         </div>
         <div class="customer-item">
-            <img src="{{ asset('images/Venue2.jpeg') }}" alt="Product 2">
-            <a class="whatsapp-link" href="https://wa.me/081394887296?text=Hallo! Saya tertarik dengan Venue 2.">
+            <img src="{{ asset('images/Admin2.jpeg') }}" alt="Product 2">
+            <a class="whatsapp-link" href="https://wa.me/+6282393262190?text=Kontak Admin Rocky - 210711286">
                 Chat Admin WhatsApp
             </a>
         </div>
         <div class="customer-item">
-            <img src="{{ asset('images/Venue3.jpeg') }}" alt="Product 3">
-            <a class="whatsapp-link" href="https://wa.me/081394887296?text=Hallo! Saya tertarik dengan Venue 3.">
+            <img src="{{ asset('images/Admin3.jpeg') }}" alt="Product 3">
+            <a class="whatsapp-link" href="https://wa.me/+6281228332396?text=Kontak Admin Erick - 210711155">
                 Chat Admin WhatsApp
             </a>
         </div>

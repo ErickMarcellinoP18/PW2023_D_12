@@ -44,7 +44,7 @@ class EventController extends Controller
             'category' => $request->category,
         ]);
 
-        return redirect()->route('event.index')->with('success', 'Berhasil menambah event baru!');
+        return redirect()->route('home')->with('success', 'Berhasil menambah event baru!');
     }
 
     public function edit($id_event)
